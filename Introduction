@@ -1,0 +1,97 @@
+NumPy ka Real Meaning
+
+NumPy = Numerical Python
+
+| Excel Me        | NumPy Me              |
+| --------------- | --------------------- |
+| Column          | Array                 |
+| Row             | Index                 |
+| Formula         | Vector Operation      |
+| SUM(A1:A100000) | arr.sum() (100x fast) |
+
+
+------------------------------------------------------------------------------------------------------
+
+=SUM(B2:B100000)
+
+
+import numpy as np
+
+salary = np.array([25000,30000,28000,35000])
+print(salary.sum())
+
+💥 Excel se 50–100 times fast
+
+-------------------------------------------------------------------------------------------------------
+
+SELECT AVG(salary) FROM employee;
+import numpy as np
+
+salary = np.array([25000,30000,28000,35000])
+print(np.mean(salary))
+
+
+
+==================================================================================================================================
+
+📘 NumPy – Lecture 1
+(Excel → Python Transformation)
+🔹 NumPy kya hota hai?
+
+NumPy = Numerical Python
+Ye Excel ke formulas, calculations aur fast processing ka Python version hai.
+
+
+
+==============================================================================================================
+| Salary |
+| ------ |
+| 25000  |
+| 30000  |
+| 28000  |
+| 35000  |
+
+
+import numpy as np
+
+salary = np.array([25000, 30000, 28000, 35000])
+print(salary)
+
+
+| Excel Formula   | NumPy Code    |
+| ----------------| --------------|
+| =SUM(B2:B5)     | salary.sum()  |
+| =AVERAGE(B2:B5) | salary.mean() |
+| =MAX(B2:B5)     | salary.max()  |
+| =MIN(B2:B5)     | salary.min()  |
+
+
+================================================================================================================
+
+=B2 + 5000
+
+new_salary = salary + 5000
+print(new_salary)
+
+Condition – IF Formula
+-----------------------
+Excel:
+=IF(B2>28000,"Good","Low")
+NumPy:
+result = np.where(salary > 28000, "Good", "Low")
+print(result)
+
+
+high_salary = salary[salary > 28000]
+print(high_salary)
+
+
+
+Homework
+marks = np.array([55, 78, 45, 90, 60])
+
+# 1. Total marks
+# 2. Average marks
+# 3. Add 5 grace marks
+# 4. Find students with marks > 60
+
