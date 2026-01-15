@@ -95,3 +95,15 @@ marks = np.array([55, 78, 45, 90, 60])
 # 3. Add 5 grace marks
 # 4. Find students with marks > 60
 
+
+=====================================================================================================================
+lecture 2 
+===========
+import numpy as np
+salary = np.array([25000,30000,28000,35000,40000,15000])
+
+Percentage Change (Growth Rate)
+growth = (salary - salary.mean()) / salary.mean() * 100
+print(growth)
+
+
